@@ -3,11 +3,11 @@ def tabuleiro():
     for i in range(8):
         linha = []
         for x in range(8):
-            linha.append(int(input('Entre com valor [%i][%i]:'%(i,x))))
+            linha.append(int(input('Entre com valor [%i][%i]:' % (i, x))))
         entrada.append(linha)
     return entrada
 
-peao, bispo, cavalo, torre, rainha, rei = 0,0,0,0,0,0
+peao, bispo, cavalo, torre, rainha, rei = 0, 0, 0, 0, 0, 0
 
 mesa = tabuleiro()
 
@@ -26,7 +26,7 @@ for linha in range(8):
     rainha += mesa[linha].count(5)
     rei += mesa[linha].count(6)
 
-texto ='''
+texto = '''
 Peão: {} peça(s)
 Bispo: {} peça(s)
 Cavalo: {} peça(s)
@@ -35,5 +35,4 @@ Rainha: {} peça(s)
 Rei: {} peça(s)
 '''
 
-print(texto.format(peao,bispo,cavalo,torre,rainha,rei))
-    
+print(texto.format(peao, bispo, cavalo, torre, rainha, rei))
